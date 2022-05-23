@@ -49,8 +49,8 @@ function M.setup(config)
     Normal = { fg = c.fg, bg = config.transparent and c.none or c.bg }, -- normal text
     NormalNC = { fg = c.fg, bg = config.transparent and c.none or c.bg }, -- normal text in non-current windows
     NormalSB = { fg = c.fg_sidebar, bg = c.bg_sidebar }, -- normal text in non-current windows
-    NormalFloat = { fg = c.fg, bg = c.bg_float }, -- Normal text in floating windows.
-    FloatBorder = { fg = c.border_highlight, bg = c.bg_float },
+    NormalFloat = { fg = c.fg }, -- Normal text in floating windows.
+    FloatBorder = { fg = c.border_highlight },
     Pmenu = { bg = c.bg_popup, fg = c.fg }, -- Popup menu: normal item.
     PmenuSel = { bg = util.darken(c.fg_gutter, 0.8) }, -- Popup menu: selected item.
     PmenuSbar = { bg = util.lighten(c.bg_popup, 0.95) }, -- Popup menu: scrollbar.
@@ -303,8 +303,8 @@ function M.setup(config)
     GitSignsDelete = { fg = c.gitSigns.delete }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
-    TelescopeBorder = { fg = c.border_highlight, bg = c.bg_float },
-    TelescopeNormal = { fg = c.fg, bg = c.bg_float },
+    TelescopeBorder = { fg = c.border_highlight },
+    TelescopeNormal = { fg = c.fg },
 
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
@@ -350,7 +350,7 @@ function M.setup(config)
     DiagnosticWarning = { link = "DiagnosticWarn" },
     DiagnosticInformation = { link = "DiagnosticInfo" },
 
-    LspFloatWinNormal = { bg = c.bg_float },
+    LspFloatWinNormal = {},
     LspFloatWinBorder = { fg = c.border_highlight },
     LspSagaBorderTitle = { fg = c.cyan },
     LspSagaHoverBorder = { fg = c.blue },
@@ -420,8 +420,8 @@ function M.setup(config)
     LightspeedUnlabeledMatch = { fg = c.blue2, style = "bold" },
 
     -- Cmp
-    CmpDocumentation = { fg = c.fg, bg = c.bg_float },
-    CmpDocumentationBorder = { fg = c.border_highlight, bg = c.bg_float },
+    CmpDocumentation = { fg = c.fg },
+    CmpDocumentationBorder = { fg = c.border_highlight },
 
     CmpItemAbbr = { fg = c.fg, bg = c.none },
     CmpItemAbbrDeprecated = { fg = c.fg_gutter, bg = c.none, style = "strikethrough" },
